@@ -5,7 +5,7 @@
   tasks:
     - name: Fetch file from remote directory and save
       ansible.builtin.get_url:
-        url: https://raw.githubusercontent.com/beedydo/rhce_practice/main/hwreport.empty
+        url: https://github.com/beedydo/rhce_practice/raw/refs/heads/main/hwreport.empty
         dest: /home/ec2-user/ansible/hwreport.txt
 
     - name: Fetch and replace inventory hostname
