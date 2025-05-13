@@ -3,10 +3,11 @@
   hosts: all
   become: true
   tasks:
-    - name: Fetch file from remote directory and save
-      ansible.builtin.get_url:
-        url: https://github.com/beedydo/rhce_practice/raw/refs/heads/main/hwreport.empty
+    - name: Fetch file from local directory and save
+      ansible.builtin.template:
+        src: hwreport.empty
         dest: /home/ec2-user/ansible/hwreport.txt
+        mode: '0644'
 
     - name: Fetch and replace inventory hostname
       ansible.builtin.replace:
