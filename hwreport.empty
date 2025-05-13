@@ -1,0 +1,5 @@
+Inventory Hostname: inventoryhostname
+Total Memory Size (MB): memory_in_MB
+BIOS Version: BIOS_version
+Size of disk [sda1]: disk_sda1_size
+Size of disk [sda2]: disk_sda2_size
