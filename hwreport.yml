@@ -3,6 +3,11 @@
   hosts: all
   become: true
   tasks:
+    - name: Create directory if not present
+      ansible.builtin.file:
+        path: /home/ec2-user/ansible
+        state: directory
+        mode: '0755'
     - name: Fetch file from local directory and save
       ansible.builtin.template:
         src: hwreport.empty
